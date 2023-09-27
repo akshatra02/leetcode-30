@@ -1,0 +1,22 @@
+class Solution {
+    public String decodeAtIndex(String s, int k) {
+        long l=0;
+        for(char i:s.toCharArray()){
+            if(Character.isDigit(i)) l*=(i-'0');
+            else l++;
+        }
+        for(int j=s.length()-1;j>=0;j--){
+            char cc=s.charAt(j);
+            if(Character.isDigit(cc)){
+                l/=(cc-'0');
+                k%=l;
+            }else{
+                if(k==0 || l==k){
+                    return String.valueOf(cc);
+                }
+                l--;
+            }
+        }
+        return "";
+    }
+}
