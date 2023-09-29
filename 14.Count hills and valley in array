@@ -1,0 +1,13 @@
+class Solution {
+    public int countHillValley(int[] n) {
+        int h=0,l=n.length;
+          int a=n[0];
+        for(int i=1;i<l-1;i++){
+            if(a<n[i] && n[i+1]<n[i] || a>n[i] && n[i+1]>n[i] ){
+                h++;
+                a=n[i];
+            }
+        }
+        return h;
+    }
+}
