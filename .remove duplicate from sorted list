@@ -1,0 +1,13 @@
+class Solution {
+    public int removeDuplicates(int[] n) {
+        int k=1,l=n.length;
+        for(int i=1;i<l;i++){
+           if(n[i]!=n[i-1]){
+               n[k]=n[i];
+               k++;
+           }
+        }
+    return k;
+    }
+
+}
