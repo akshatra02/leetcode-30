@@ -1,0 +1,13 @@
+class Solution {
+    public boolean find132pattern(int[] n) {
+        int l=n.length;
+        int a=n[0];
+        for(int i=1;i<l-1;i++){
+            for(int j=2;j<l;j++)
+            if(a <n[i] && n[i]>n[j] && a<n[j])return true;
+            // else return false;
+            a=n[i];
+        }
+        return false;
+    }
+}
