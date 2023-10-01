@@ -1,0 +1,19 @@
+class Solution {
+    public String reverseWords(String s) {
+        String r="",b="",x="";
+        char a;
+        String []st=s.split(" ");
+        int o=st.length;
+        for(int i=0;i<o;i++){
+            int l=st[i].length();
+            x=st[i];
+            for(int j=0;j<l;j++){
+                 a=x.charAt(j);
+                r=a+r;
+            }
+        b+=r+" ";
+        r="";
+        }
+        return b.trim();
+    }
+}
