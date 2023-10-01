@@ -1,0 +1,15 @@
+
+class Solution {
+    public int strStr(String h, String n) {
+        int r,l=h.length(),m=n.length(),ne=0;;
+        for(int i=0;i<l;i++){
+            if(h.charAt(i)==n.charAt(ne))ne++;
+            else {i=i-ne;
+            ne=0;
+            }
+            if(ne==m) return i-m+1;
+        }
+        return -1;
+
+    }
+}
