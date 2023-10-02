@@ -1,0 +1,13 @@
+class Solution {
+    public boolean winnerOfGame(String c) {
+        int as=0,bs=0,l=c.length();
+        for(int i=1;i<l-1;i++){
+            if(c.charAt(i)==c.charAt(i+1) && c.charAt(i)==c.charAt(i-1)){
+                if(c.charAt(i)=='A')as++;
+                else bs++;
+            }
+        }
+        if(as>bs)return true;
+        return false;
+    }
+}
