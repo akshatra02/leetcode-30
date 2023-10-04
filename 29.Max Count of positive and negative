@@ -1,0 +1,13 @@
+class Solution {
+    public int maximumCount(int[] nums) {
+        int n=0,p=0,z=0;
+        for(int i:nums){
+            if(i<0)n++;
+            else if(i>0)p++;
+            else z++;
+        }
+        if(n<=p)return p;
+        else if(n>p)return n;
+        return 0;
+    }
+}
