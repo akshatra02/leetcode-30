@@ -1,0 +1,12 @@
+class Solution {
+    public int findFinalValue(int[] nums, int o) {
+        int l=nums.length;
+        for(int r=0;r<l;r++){
+            if(nums[r]==o){
+                o=2*o;
+                return findFinalValue(nums,o);
+            }
+        }
+        return o;
+    }
+}
