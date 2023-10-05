@@ -1,0 +1,24 @@
+class Solution {
+    public List<Integer> majorityElement(int[] n) {
+        int l=n.length;
+        int a=l/3;
+        List<Integer> r=new ArrayList<>();
+        for(int j=0;j<l;j++){
+            int c=0;
+            // if(a==0 && !r.contains(n[j]))r.add(n[j]);
+        for(int i=0;i<l;i++){
+            if(n[j]==n[i])c++;
+        }
+            // System.out.println(n[j]+"  "+n[i]+"  "+c+" "+a);
+             if(c>a){
+                 if(!r.contains(n[j])){
+             r.add(n[j]);
+            //  x++;
+                 
+         }
+        }
+    
+        }
+return r;
+    }
+}
