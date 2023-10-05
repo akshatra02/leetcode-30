@@ -1,0 +1,19 @@
+ class Solution {
+    public int majorityElement(int[] nums) {
+        Map<Integer, Integer> h = new HashMap<>();
+        int majority = 0;
+        int majorityCount = 0;
+
+        for (int num : nums) {
+            int count = h.getOrDefault(num, 0) + 1;
+            h.put(num, count);
+
+            if (count > majorityCount) {
+                majority = num;
+                majorityCount = count;
+            }
+        }
+
+        return majority;
+    }
+}
