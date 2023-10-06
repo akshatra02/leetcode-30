@@ -1,0 +1,16 @@
+class Solution {
+    public boolean isVowel(char c){
+            if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u') return true;
+            return false;
+        }
+    public int vowelStrings(String[] w, int l, int r) {
+        int c=0;
+        
+        for(int a=l;a<=r;a++){
+            String x=w[a];
+            int i=x.length()-1;
+            if(isVowel(x.charAt(0)) && isVowel(x.charAt(i)))c++;
+        }
+        return c;
+    }
+}
